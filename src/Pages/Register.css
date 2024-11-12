@@ -1,0 +1,89 @@
+/* Container for the entire registration form and image */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    padding: 20px;
+    position: relative; /* Added to position logo */
+}
+
+/* Logo container styles */
+.logo-container {
+    position: absolute; /* Position logo relative to container */
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+}
+
+.logo {
+    height: 50px; /* Adjust size as needed */
+    width: auto;
+}
+
+/* Card-like container for the registration form */
+.register-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    max-width: 400px;
+    width: 100%;
+    margin-right: 20px; /* Space between the two cards */
+}
+
+/* Card-like container for the image */
+.image-card {
+    background-color: white;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden; /* To ensure the image fits within the card */
+}
+
+/* Style the image to fit the card */
+.image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Centering the form elements */
+.register-card h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+.register-card .mb-3 {
+    margin-bottom: 15px;
+}
+
+.register-card .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.register-card .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.register-card .forgot-password {
+    margin-top: 15px;
+    text-align: center;
+    color: #007bff;
+}
+
+.register-card .forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
