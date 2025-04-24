@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "nextstep-441712",
+  "private_key_id": "200efcfe57efb114d096469a61e65855826bbd8d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCmtcTFFxe6spkT\nA9Bunv0C5kGOXQabSBCm8rYBBHA6cWB1SFMn7o3jXHgHaVcq0QapE4uKcyum4fmx\n/qCh1VxIc5Uy0Bu3w+9Em3uENnbOx427nzFfy+FWvvhIGD6m3TOX6LKvO4J1dWym\nveMHorztlF0ruzyZrrT5a7esTwwWQay4EtON2sjBFwDnQsUT0cvZkjgHL/vaVmEg\newtn+9nvNPXX/5Iwohu9yt46scLTLuGquXyUwrl5EDCzumpPoedO1mbgm1N34v7Q\nayeUSjQu9V4CLosRkBkQ5u8wi9LMEGhTN/8R68HxEpq78gnGIVrKabuIhCuYVt29\nP2un/tyTAgMBAAECggEARHe6zMdjM4ZOYATdAdHCUAKJQhLqt7OtQyPDpD9SaG5Q\nE1sU6/2JwKslkMWuyyL1/VLNqJsMfomop3XQOycJs6fkyu21tI+AIUlKPU6xFNPY\nXgpPmOx/K8Va6yEp+hY3LlifqmBigCMt8H1kVKp9tYWNjnxjsyqRoS6gTOBaMnk0\nvprfA4onjStqC1vfzGoS9aQ06vFigILq2Ct/TNtgnc4pefiWi8MnRx5kLlZI4meK\nvoLOpx4TSqmULxO0B/tH6fUt2GC8ybvWVR8dAeHg9N3dtUQoWDAwjzW09WH4mcq0\nfobcqHAcQQ3z1v1G134QQh80Q2ZrJAskYNAsDgSF4QKBgQDX9tE0NF/NUQYTLuN8\neGGV85YrqpjB2+d1ZbZspOmxB29PjB7PdZhVaHJV9wqpBJQqVA7WrsMz4M2QmMXe\npUqZ9i9W0VlTqmuRM8HXKYOCMItzk7lY7muqIhzhN0wsv9bpre86YyQEpHWMOx5G\nVnNPEqk1JxoBLYG5Zr6M/FE4pwKBgQDFnXXXhJyLvwSSWXi0iTw/fP2B9vPZwwhc\nC4OIC9L+BKjH42ODkuKi5H2YFXGKt0d23zsXVAPpffaft/cQoheKeMBm8Bzu2XHM\nB1yieBos7URXb8WHshHSk5NYZZvjHHAkgcuIxQdhhn70gpEN623nzV3G/jUvEsbB\n13fiEuMONQKBgGYl0fHVS/L6/dqY9PRspAue+UqSGEqpTqMShuSAZCBdmeKQLgqG\nXpUXH+1VOe+TwNj8hUA5zQ5+p/xapkyW9eA4t09jGdMe6l31kxvIAPHVMEBsgOB1\ndOs1018bHqaT3n0MzfhZ6DFh8E9xrvIp9cRS2UHQytX/xjoBROO+fFRFAoGBAJBA\nwSTxyNS6O7wZU+N1ymUN+IBGpPrxQ8jtHrbQ6tRC0nIXqy0ArC/8WzIJdTitUZ2U\nlq4QxkpLiRxOTiv2JvkN7GU4Iea5FDi7pwNyaKkjCiBJlwfXFOuCjqyYf5Lpz3LW\nzJyqNxkZ9NLH/NsMYM41O59nMauLKUuW3gxJfTWBAoGAVU6AH/EE32iMx/2p1lAz\nWFnt18Hoe0Pn+EcbaAw1kLfFMGaKv3dm+yWD8IvHUjykjG50My8aVSb1+05erXei\n7BCtX8OnTG9dqxacAxuKFvBiv4Rac8cTIphCu+abet0QmD8ktpenURNlu9VN5TlZ\nr6B3n7ZbBFXjN4OrvXf1qyk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "career-assessment-service@nextstep-441712.iam.gserviceaccount.com",
+  "client_id": "101685670533381440124",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/career-assessment-service%40nextstep-441712.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,103 @@
+/* Container for the entire page */
+.software-engineering-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Banner at the top */
+.banner {
+  background-color: #4CAF50;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* Job Description Section */
+.job-description h2,
+.skills h2,
+.roadmap-banner h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 0;
+}
+
+.job-description p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Skill Requirements Section */
+.skills ul {
+  list-style-type: disc;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.skills li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Roadmap Banner Section */
+.roadmap-banner {
+  background-color: #FF9D3D;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.roadmap-link button { 
+  background-color: #007bff; 
+  color: white; 
+  padding: 12px 24px; /* Adjusted padding for round shape */
+  border: none; 
+  border-radius: 20px; /* Increased border-radius for a rounder shape */
+  font-size: 1.1rem; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.roadmap-link button:hover {
+  background-color: #0056b3; 
+}
+
+/* Cards Section */
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}

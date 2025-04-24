@@ -1,25 +1,160 @@
-nav{
+/* Main navbar styles */
+nav {
     width: 100%;
-    /* background: #FFBD73; */
     color: #fff;
     padding: 4px 0;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
-    align-items: center;
+    align-items: center; /* Ensures all elements are vertically aligned */
     justify-content: space-between;
     z-index: 10;
-    
-}
-
-.logo{
-    width : 180px;
-}
-
-nav ul li{
+    transition: background-color 0.5s ease;
+  }
+  
+  .logo {
+    width: 180px;
     display: inline-block;
+    vertical-align: middle; /* Aligns logo to the middle of navbar */
+  }
+  
+  /* Navbar items */
+  nav ul {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment of list items */
     list-style: none;
-    margin: 5px 20px;
+    gap: 15px; /* Consistent spacing between items */
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 10px; /* Adjust spacing */
     font-size: 18px;
-}
+    vertical-align: middle; /* Aligns text items properly */
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffbd73; /* Hover color */
+  }
+  
+  /* Dropdown menu */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333; /* Default dropdown background */
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .dropdown-menu.dark-nav {
+    background-color: #444; /* Adjusted for dark-nav theme */
+  }
+  
+  .dropdown-menu.shadetwo-nav {
+    background-color: #FF9D3D; /* Adjusted for shadetwo-nav theme */
+  }
+  
+  .dropdown-item {
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #555; /* Highlight effect */
+    color: #FFBD73; /* Hover text color */
+  }
+  
+  /* Dark navbar theme */
+  .dark-nav {
+    background: #FFBD73; /* Sticky background */
+    transition: background-color 0.5s ease;
+  }
+  
+  /* ShadeTwo navbar theme */
+  .shadetwo-nav {
+    background-color: #FF9D3D; /* Login screen background */
+    transition: background-color 0.5s ease;
+  }
+  
+  /* Buttons (Profile/Logout) */
+  .btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px; /* Increase button text size */
+    display: flex;
+    align-items: center; /* Vertically aligns button text */
+    justify-content: center; /* Horizontally centers button text */
+    height: 40px; /* Consistent height for buttons */
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #45A049;
+  }
+  
+  .logout-button {
+    background-color: #f44; /* Red background for Logout button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center; /* Vertically aligns button text */
+    justify-content: center; /* Horizontally centers button text */
+    height: 40px; /* Consistent height for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #d33; /* Darker red on hover */
+  }
+  
+  /* Adjust Navbar for responsive view */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column; /* Stack items vertically on small screens */
+      gap: 10px;
+    }
+  
+    .btn,
+    .logout-button {
+      width: 100%; /* Full width for buttons on small screens */
+    }
+  }
+  
