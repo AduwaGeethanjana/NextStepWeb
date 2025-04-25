@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
-import Navbar from '../Components/NavBar/NavBar';
-import { auth } from './firebase';
+import NavBar from '../../Components/NavBar/NavBar';
+import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

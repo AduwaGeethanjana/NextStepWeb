@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Register from './Pages/Register'; // Import Register page
-import Login from './Pages/Login'; // Import Login page
+import Login from './Pages/Login/Login'; // Import Login page
 import ResetPassword from './Pages/ResetPassword';
 import QuizPage from './Pages/QuizPage';
 import SoftwareEngineering from './Pages/Careers/SoftwareEngineering';
