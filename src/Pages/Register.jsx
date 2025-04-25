@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import googleIcon from '../assets/google.png';
-import registerBg from '../assets/registerbg.png';
+import registerBg from '../assets/Registerbg.png';
 
 const Register = () => {
   const [form, setForm] = useState({
