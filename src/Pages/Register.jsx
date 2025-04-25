@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Register.css';
 import NavBar from '../Components/NavBar/NavBar';
 import { auth, provider, db } from './firebase';
 import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
@@ -9,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import googleIcon from '../assets/google.png';
+import registerBg from '../assets/registerbg.png';
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -32,17 +32,12 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      // Generate a unique ID for the user
       const uniqueId = uuidv4();
-
-      // Step 1: Create a user in Firebase Authentication
       const userCredential = await createUserWithEmailAndPassword(auth, form.email, form.password);
       const user = userCredential.user;
-      console.log('User created:', user.uid); // Debug log
 
-      // Step 2: Save additional data to Firestore with unique ID
       await setDoc(doc(db, 'users', user.uid), {
-        uniqueId: uniqueId,
+        uniqueId,
         uid: user.uid,
         firstName: form.firstName,
         lastName: form.lastName,
@@ -52,12 +47,11 @@ const Register = () => {
         university: form.university,
         degreeProgramme: form.degreeProgramme,
       });
-      console.log('User data saved in Firestore'); // Debug log
 
       toast.success('Successfully registered!');
-      navigate('/login'); // Redirect to the profile page
+      navigate('/login');
     } catch (error) {
-      console.error('Registration failed:', error); // Debug log
+      console.error('Registration failed:', error);
       toast.error('Registration failed. Please try again.');
     }
   };
@@ -66,13 +60,10 @@ const Register = () => {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
-
-      // Generate a unique ID for the user
       const uniqueId = uuidv4();
 
-      // Save additional data to Firestore for Google users
       await setDoc(doc(db, 'users', user.uid), {
-        uniqueId: uniqueId,
+        uniqueId,
         uid: user.uid,
         firstName: user.displayName.split(' ')[0],
         lastName: user.displayName.split(' ')[1] || '',
@@ -84,7 +75,7 @@ const Register = () => {
       });
 
       toast.success('Successfully registered with Google!');
-      navigate('/profile'); // Redirect to the profile page
+      navigate('/profile');
     } catch (error) {
       console.error('Google sign-in failed:', error);
       toast.error('Google sign-in failed.');
@@ -92,18 +83,45 @@ const Register = () => {
   };
 
   return (
-    <div className="register-page">
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        minHeight: '100vh',
+        backgroundImage: `url(${registerBg})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        padding: '0 5%',
+      }}
+    >
       <NavBar />
-      <div className="register-container">
-        <h2>Create Account</h2>
-        <form onSubmit={handleRegister}>
-          <div className="name-inputs">
+      <div
+        style={{
+          marginTop: '8%',
+          backgroundColor: '#FF9D3D',
+          padding: '3rem',
+          borderRadius: '12px',
+          width: '100%',
+          maxWidth: '600px',
+          textAlign: 'left',
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+          zIndex: 1,
+          marginRight: '20%',
+          marginBottom: '5%',
+        }}
+      >
+        <h2 style={{ fontSize: '2rem', color: '#fff', marginBottom: '1rem' }}>Create Account</h2>
+        <form onSubmit={handleRegister} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <input
               type="text"
               name="firstName"
               placeholder="First Name"
               onChange={handleChange}
               required
+              style={{ flex: 1, padding: '12px', borderRadius: '6px', border: '1px solid #ddd' }}
             />
             <input
               type="text"
@@ -111,6 +129,7 @@ const Register = () => {
               placeholder="Last Name"
               onChange={handleChange}
               required
+              style={{ flex: 1, padding: '12px', borderRadius: '6px', border: '1px solid #ddd' }}
             />
           </div>
           <input
@@ -119,6 +138,7 @@ const Register = () => {
             placeholder="Email"
             onChange={handleChange}
             required
+            style={{ padding: '12px', borderRadius: '6px', border: '1px solid #ddd' }}
           />
           <input
             type="password"
@@ -126,6 +146,7 @@ const Register = () => {
             placeholder="Password"
             onChange={handleChange}
             required
+            style={{ padding: '12px', borderRadius: '6px', border: '1px solid #ddd' }}
           />
           <input
             type="number"
@@ -133,16 +154,16 @@ const Register = () => {
             placeholder="Age"
             onChange={handleChange}
             required
+            style={{ padding: '12px', borderRadius: '6px', border: '1px solid #ddd' }}
           />
           <select
             name="educationLevel"
             onChange={handleChange}
             value={form.educationLevel}
             required
+            style={{ padding: '12px', borderRadius: '6px', border: '1px solid #ddd' }}
           >
-            <option value="" disabled>
-              Select Education Level
-            </option>
+            <option value="" disabled>Select Education Level</option>
             <option value="Undergraduate - 1st year">Undergraduate - 1st year</option>
             <option value="Undergraduate - 2nd year">Undergraduate - 2nd year</option>
             <option value="Undergraduate - 3rd year">Undergraduate - 3rd year</option>
@@ -155,6 +176,7 @@ const Register = () => {
             placeholder="University"
             onChange={handleChange}
             required
+            style={{ padding: '12px', borderRadius: '6px', border: '1px solid #ddd' }}
           />
           <input
             type="text"
@@ -162,10 +184,25 @@ const Register = () => {
             placeholder="Degree Programme"
             onChange={handleChange}
             required
+            style={{ padding: '12px', borderRadius: '6px', border: '1px solid #ddd' }}
           />
-          <button type="submit" className="register-button">Create Account</button>
+          <button
+            type="submit"
+            style={{
+              padding: '12px',
+              backgroundColor: '#333',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '6px',
+              fontSize: '1rem',
+              cursor: 'pointer',
+              marginTop: '1rem',
+            }}
+          >
+            Create Account
+          </button>
         </form>
-        <p className="centered-text">
+        <p style={{ textAlign: 'center', fontSize: '0.9rem', marginTop: '1rem' }}>
           Already have an account?{' '}
           <a
             href="#"
@@ -173,15 +210,28 @@ const Register = () => {
               e.preventDefault();
               navigate('/login');
             }}
+            style={{ color: '#333', textDecoration: 'underline', cursor: 'pointer' }}
           >
             Login
           </a>
         </p>
-        <div className="divider centered-text">
-          <span>or</span>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '1.5rem 0' }}>
+          <span style={{ padding: '0 1rem', fontSize: '0.9rem', color: '#333' }}>or</span>
         </div>
-        <button className="google-signin-button" onClick={handleGoogleSignIn}>
-          <img src={googleIcon} alt="Google Icon" className="google-button-image" />
+        <button
+          onClick={handleGoogleSignIn}
+          style={{
+            padding: 0,
+            border: 'none',
+            background: 'none',
+            width: '100%',
+            maxWidth: '250px',
+            margin: '0 auto',
+            display: 'block',
+            cursor: 'pointer',
+          }}
+        >
+          <img src={googleIcon} alt="Google Sign In" style={{ width: '100%', borderRadius: '6px' }} />
         </button>
       </div>
     </div>
