@@ -279,18 +279,22 @@ const QuizPage = () => {
       <h2>Question {currentQuestionIndex + 1} of {questions.length}</h2>
       <p>{currentQuestion.questionString}</p>
       <div className="options">
-        {[1, 2, 3, 4, 5].map((value) => (
-          <button
-            key={value}
-            onClick={() => handleAnswer(value)}
-            className={`option-button ${
-              responses[currentQuestion.questionId] === value ? 'selected' : ''
-            }`}
-          >
-            {value}
-          </button>
-        ))}
-      </div>
+  {currentQuestion.options && currentQuestion.options.map((optionText, index) => {
+    const value = index + 1; // 1 to 5
+    return (
+      <button
+        key={value}
+        onClick={() => handleAnswer(value)} // Send numeric value
+        className={`option-button ${
+          responses[currentQuestion.questionId] === value ? 'selected' : ''
+        }`}
+      >
+        {optionText} {/* Display actual option text */}
+      </button>
+    );
+  })}
+</div>
+
       <div className="navigation-buttons">
         <button
           onClick={handleBack}

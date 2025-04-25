@@ -1,5 +1,6 @@
 import React from 'react';
 import './Careers.css';
+import { Link } from 'react-router-dom';
 
 const DevOpsEngineer = () => {
   return (
@@ -45,18 +46,18 @@ const DevOpsEngineer = () => {
 
       {/* Cards Section */}
       <section className="cards-section">
-        <div className="card">
+        <Link to="/docourses" className="card">
           <h3>Courses</h3>
           <p>Discover courses that can help you build DevOps expertise.</p>
-        </div>
-        <div className="card">
+        </Link>
+        <Link to="/doprojects" className="card">
           <h3>Projects</h3>
           <p>Work on projects to understand real-world DevOps workflows.</p>
-        </div>
-        <div className="card">
+        </Link>
+        <Link to="/dojobs" className="card">
           <h3>Job Opportunities</h3>
           <p>Explore job roles available for DevOps engineers.</p>
-        </div>
+        </Link>
       </section>
       
     </div>

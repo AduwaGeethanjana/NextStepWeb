@@ -34,6 +34,9 @@ import MachineLearningCourses from './Pages/Courses/MLCourses';
 import DevOpsCourses from './Pages/Courses/DevOpsCourses';
 import CyberSecurityCourses from './Pages/Courses/CyberSecurityCourses';
 import ProjectManagementCourses from './Pages/Courses/PMCourses';
+import Courses from './Pages/Courses/Courses';
+import Jobs from './Pages/Jobs/Jobs';
+import Projects from './Pages/Projects/Projects';
 import { ToastContainer } from 'react-toastify'; // Import ToastContainer for notifications
 import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
 
@@ -64,7 +67,6 @@ const App = () => {
         <Route path="/pmprojects" element={<ProjectManagementProjects/>} />
         <Route path="/doquiz" element={<DevOpsQuiz/>} />
         <Route path="/doprojects" element={<DevOpsProjects/>} />
-        <Route path="/jobs" element ={<JobsPage/>} />
         <Route path="/sejobs" element ={<SEJobs/>} />
         <Route path="/mljobs" element ={<MLJobs/>} />
         <Route path="/pmjobs" element ={<PMJobs/>} />
@@ -75,6 +77,9 @@ const App = () => {
         <Route path="/pmcourses" element ={<ProjectManagementCourses/>}/>
         <Route path="/cscourses" element ={<CyberSecurityCourses/>}/>
         <Route path="/docourses" element ={<DevOpsCourses/>}/>
+        <Route path="/courses" element ={<Courses/>}/>
+        <Route path="/jobs" element ={<Jobs/>}/>
+        <Route path="/projects" element ={<Projects/>}/>
       </Routes>
       <ToastContainer />
     </Router>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Careers.css';
+import { Link } from 'react-router-dom';
 
 const ProjectManager = () => {
   return (
@@ -38,25 +39,25 @@ const ProjectManager = () => {
       {/* Roadmap Banner */}
       <section className="roadmap-banner">
         <h2>Explore the Roadmap</h2>
-        <a href="https://roadmap.sh/project-management" target="_blank" rel="noopener noreferrer" className="roadmap-link">
+        <a href="https://roadmap.sh/product-manager" target="_blank" rel="noopener noreferrer" className="roadmap-link">
           https://roadmap.sh/project-management
         </a>
       </section>
 
       {/* Cards Section */}
       <section className="cards-section">
-        <div className="card">
+        <Link to="/pmcourses" className="card">
           <h3>Courses</h3>
           <p>Learn project management methodologies and tools through professional courses.</p>
-        </div>
-        <div className="card">
+        </Link>
+        <Link to="/pmprojects" className="card">
           <h3>Projects</h3>
           <p>Work on project-based scenarios to gain practical experience in project management.</p>
-        </div>
-        <div className="card">
+        </Link>
+        <Link to="/pmjobs" className="card">
           <h3>Job Opportunities</h3>
           <p>Explore diverse roles in project management across industries.</p>
-        </div>
+        </Link>
       </section>
       
     </div>

@@ -3,13 +3,13 @@ import { Link, useLocation } from 'react-router-dom';
 import './NavBar.css';
 import logo from '../../assets/logo.png';
 import { auth } from '../../Pages/firebase';
-import { onAuthStateChanged, signOut } from 'firebase/auth'; // Firebase logout function
+import { onAuthStateChanged, signOut } from 'firebase/auth'; 
 import { toast } from 'react-toastify';
 
 const NavBar = () => {
   const [sticky, setSticky] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track user login
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
   const location = useLocation();
 
   useEffect(() => {
@@ -23,12 +23,12 @@ const NavBar = () => {
   }, []);
 
   useEffect(() => {
-    // Listen for authentication state changes
+    
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setIsLoggedIn(!!user); // Set to true if user exists, false otherwise
+      setIsLoggedIn(!!user); 
     });
 
-    return () => unsubscribe(); // Cleanup listener on component unmount
+    return () => unsubscribe(); 
   }, []);
 
   const handleLogout = () => {
@@ -44,11 +44,11 @@ const NavBar = () => {
     }
   };
 
-  // Check specific routes for theme adjustments
+  
   const isLoginScreen =
     location.pathname === '/login' ||
     location.pathname === '/register' ||
-    location.pathname === '/resetpassword'; // Add these routes for consistent theme
+    location.pathname === '/resetpassword'; 
   const isHomePage = location.pathname === '/';
 
   return (
@@ -71,7 +71,7 @@ const NavBar = () => {
           {dropdownOpen && (
             <ul className={`dropdown-menu ${isHomePage ? 'dark-nav' : ''}`}>
               <li>
-                <Link to="/career-test" className="dropdown-item">
+                <Link to="/quiz" className="dropdown-item">
                   Career Test
                 </Link>
               </li>
@@ -81,22 +81,22 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/knowledge-network" className="dropdown-item">
+                <Link to="/knowledgenetwork" className="dropdown-item">
                   Knowledge Network
                 </Link>
               </li>
               <li>
-                <Link to="/online-courses" className="dropdown-item">
+                <Link to="/courses" className="dropdown-item">
                   Online Courses
                 </Link>
               </li>
               <li>
-                <Link to="/explore-jobs" className="dropdown-item">
+                <Link to="/jobs" className="dropdown-item">
                   Explore Jobs
                 </Link>
               </li>
               <li>
-                <Link to="/hands-on-projects" className="dropdown-item">
+                <Link to="/projects" className="dropdown-item">
                   Hands-on Projects
                 </Link>
               </li>

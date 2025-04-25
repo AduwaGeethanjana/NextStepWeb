@@ -1,5 +1,6 @@
 import React from 'react';
 import './Careers.css';
+import { Link } from 'react-router-dom';
 
 const MachineLearningEngineer = () => {
   return (
@@ -38,25 +39,25 @@ const MachineLearningEngineer = () => {
       {/* Roadmap Banner */}
       <section className="roadmap-banner">
         <h2>Explore the Roadmap</h2>
-        <a href="https://roadmap.sh/machine-learning" target="_blank" rel="noopener noreferrer" className="roadmap-link">
+        <a href="https://roadmap.sh/ai-engineer" target="_blank" rel="noopener noreferrer" className="roadmap-link">
           https://roadmap.sh/machine-learning
         </a>
       </section>
 
       {/* Cards Section */}
       <section className="cards-section">
-        <div className="card">
+        <Link to="/mlcourses" className="card">
           <h3>Courses</h3>
           <p>Explore courses to master machine learning concepts and tools.</p>
-        </div>
-        <div className="card">
+        </Link>
+        <Link to="/mlprojects" className="card">
           <h3>Projects</h3>
           <p>Work on machine learning projects to gain hands-on experience.</p>
-        </div>
-        <div className="card">
+        </Link>
+        <Link to="/mljobs" className="card">
           <h3>Job Opportunities</h3>
           <p>Discover job roles in the field of machine learning.</p>
-        </div>
+        </Link>
       </section>
       
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Careers.css';
+import { Link } from 'react-router-dom';
 
 const CyberSecurity = () => {
   return (
@@ -45,18 +46,18 @@ const CyberSecurity = () => {
 
       {/* Cards Section */}
       <section className="cards-section">
-        <div className="card">
+        <Link to="/cscourses" className="card">
           <h3>Courses</h3>
           <p>Find courses to help you build expertise in cyber security concepts and tools.</p>
-        </div>
-        <div className="card">
+        </Link>
+        <Link to="/csprojects" className="card">
           <h3>Projects</h3>
           <p>Work on real-world cyber security projects to gain hands-on experience.</p>
-        </div>
-        <div className="card">
+        </Link>
+        <Link to="/csjobs" className="card">
           <h3>Job Opportunities</h3>
           <p>Explore job roles and career paths in the cyber security field.</p>
-        </div>
+        </Link>
       </section>
       
     </div>

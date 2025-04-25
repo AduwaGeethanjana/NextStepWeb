@@ -1,5 +1,6 @@
 import React from 'react';
 import './Careers.css';
+import { Link } from 'react-router-dom';
 
 const SoftwareEngineering = () => {
   return (
@@ -46,18 +47,18 @@ const SoftwareEngineering = () => {
 
       {/* Cards Section */}
       <section className="cards-section">
-        <div className="card">
+        <Link to="/secourses" className="card">
           <h3>Courses</h3>
           <p>Explore courses that can help you build a strong foundation in software engineering.</p>
-        </div>
-        <div className="card">
+        </Link>
+        <Link to="/seprojects" className="card">
           <h3>Projects</h3>
           <p>Get hands-on experience by working on real-world projects.</p>
-        </div>
-        <div className="card">
+        </Link>
+        <Link to="/sejobs" className="card">
           <h3>Job Opportunities</h3>
           <p>Discover job roles available for software engineers.</p>
-        </div>
+        </Link>
       </section>
       
     </div>

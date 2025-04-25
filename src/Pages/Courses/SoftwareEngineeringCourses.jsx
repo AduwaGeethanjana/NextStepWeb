@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Courses.css"; 
+import "./CoursesPage.css"; 
 
 const courseListingsData = [
   {

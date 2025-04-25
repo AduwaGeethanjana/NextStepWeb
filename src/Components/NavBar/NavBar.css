@@ -48,6 +48,7 @@ nav {
   /* Dropdown menu */
   .dropdown {
     position: relative;
+   
   }
   
   .dropdown-menu {
@@ -56,15 +57,15 @@ nav {
     left: 0;
     background-color: #333; /* Default dropdown background */
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-5px);
+    transform: translateY(20px);
     transition: all 0.3s ease;
   }
   
@@ -83,7 +84,7 @@ nav {
   }
   
   .dropdown-item {
-    font-size: 12px;
+    font-size: 15px;
     text-decoration: none;
     color: #fff;
     padding: 5px 10px;

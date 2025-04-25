@@ -23,19 +23,19 @@ const KnowledgeNetwork = () => {
       title: "DevOps Engineer",
       description:
         "Understand how to streamline software development and IT operations.",
-      path: "/devopsengineer",
+      path: "/devops",
     },
     {
       title: "Machine Learning Engineer",
       description:
         "Dive into designing and deploying intelligent machine learning systems.",
-      path: "/machinelearningengineer",
+      path: "/machinelearning",
     },
     {
       title: "Project Manager",
       description:
         "Master the skills to plan, organize, and manage successful projects.",
-      path: "/projectmanager",
+      path: "/projectmanagement",
     },
   ];
 
