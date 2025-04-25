@@ -20,10 +20,10 @@ const Services = () => {
                     <img src={Icon1} alt="Career Test" />
                     <h3>Career Test</h3>
                 </Link>
-                <div className="service-card">
+                <Link to="/quiz" className="service-card">
                     <img src={Icon2} alt="Skill Test" />
                     <h3>Skill Test</h3>
-                </div>
+                </Link>
                 <Link to="/knowledgenetwork"  className="service-card">
                     <img src={Icon3} alt="Knowledge Network" />
                     <h3>Knowledge Network</h3>

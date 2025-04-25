@@ -29,7 +29,7 @@ const QuizPage = () => {
       const user = auth.currentUser;
 
       if (!user) {
-        navigate('/defaultpage');
+        navigate('/default');
         return;
       }
 
@@ -46,7 +46,7 @@ const QuizPage = () => {
           }
         } else {
           console.error('No user document found.');
-          navigate('/defaultpage');
+          navigate('/default');
         }
       } catch (error) {
         console.error('Error fetching user data or test status:', error);
