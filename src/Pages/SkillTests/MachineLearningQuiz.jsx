@@ -246,7 +246,7 @@ const MachineLearningQuiz = () => {
           >
             Explore Projects to Improve
           </button>
-          <button className="btn">Explore Courses</button>
+          <button className="btn"  onClick={() => navigate('/mlcourses')}>Explore Courses</button>
         </div>
       </div>
     );

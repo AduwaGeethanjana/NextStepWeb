@@ -229,7 +229,7 @@ const ProjectManagementQuiz = () => {
           <button className="btn" onClick={() => navigate('/pmprojects')}>
             Explore Projects to Improve
           </button>
-          <button className="btn">Explore Courses</button>
+          <button className="btn"  onClick={() => navigate('/pmcourses')}>Explore Courses</button>
         </div>
       </div>
     );

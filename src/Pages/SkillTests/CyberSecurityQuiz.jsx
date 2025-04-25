@@ -232,11 +232,11 @@ const CyberSecurityQuiz = () => {
         <div className="result-buttons">
           <button
             className="btn"
-            onClick={() => navigate("/cyberprojects")}
+            onClick={() => navigate("/csprojects")}
           >
             Explore Projects to Improve
           </button>
-          <button className="btn">Explore Courses</button>
+          <button className="btn"  onClick={() => navigate('/cscourses')}>Explore Courses</button>
         </div>
       </div>
     );

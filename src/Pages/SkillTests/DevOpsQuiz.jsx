@@ -221,10 +221,10 @@ const DevOpsQuiz = () => {
           ))}
         </ul>
         <div className="result-buttons">
-          <button className="btn" onClick={() => navigate('/devopsprojects')}>
+          <button className="btn" onClick={() => navigate('/doprojects')}>
             Explore Projects to Improve
           </button>
-          <button className="btn">Explore Courses</button>
+          <button className="btn"  onClick={() => navigate('/docourses')}>Explore Courses</button>
         </div>
       </div>
     );
